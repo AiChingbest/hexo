@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" title="Coding design">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>小艾的舰长们（包含不在续费简章）</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background: url(images/05.png) center / cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        main.table {
+            width: 77vw;
+            height: 80vh;
+            background-color: #fff5;
+            box-shadow: 0 8px 16px #0005;
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .header {
+            width: 100%;
+            height: 10%;
+            background-color: #fff4;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header h1 {
+            font-size: 1.5em;
+        }
+
+        .header .input-group {
+            width: 35%;
+            height: 50%;
+            background-color: #fff5;
+            padding: 0 20px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: .2s;
+        }
+
+        .header .input-group:hover {
+            width: 45%;
+            background-color: #fff8;
+            box-shadow: 0 5px 40px #0002;
+        }
+
+        .header .input-group img {
+            width: 20px;
+            height: 20px;
+            opacity: 0.7;
+        }
+
+        .header .input-group input {
+            width: 100%;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            margin-left: 10px;
+        }
+
+        .shell {
+            width: 95%;
+            max-height: calc(90% - 25px);
+            background-color: #fffb;
+            margin: 8px auto;
+            border-radius: 10px;
+            overflow: auto;
+            overflow: overlay;
+        }
+
+        .shell::-webkit-scrollbar {
+            width: 10px;
+            height: 10px;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        td img {
+            width: 36px;
+            height: 36px;
+            margin-right: 10px;
+            border-radius: 50%;
+            vertical-align: middle;
+        }
+
+        table,
+        th,
+        td {
+            border-collapse: collapse;
+            padding: 12px 20px; /* 稍微调整padding */
+            text-align: left;
+        }
+
+        thead th {
+            position: sticky;
+            top: 0;
+            left: 0;
+            background-color: #d5d1defe;
+            cursor: pointer;
+            font-weight: bold; /* 加粗表头文字 */
+        }
+
+        /* 偶数行背景色 */
+        tbody tr:nth-child(even) {
+            background-color: #0000000b;
+        }
+
+        tbody tr:hover {
+            background-color: #fff6 !important;
+        }
+
+        .button {
+            padding: 6px 12px; /* 调整按钮padding */
+            border-radius: 40px;
+            text-align: center;
+            display: inline-block; /* 使按钮内容自适应宽度 */
+            font-size: 0.9em; /* 调整字体大小 */
+        }
+
+        a.button {
+            text-decoration: none; /* 删除链接下划线 */
+            color: inherit; /* 继承父元素的颜色 */
+        }
+
+        tr:nth-child(4n) a.button {
+            background-color: #86e49d;
+            color: #006b21;
+        }
+
+        tr:nth-child(4n-1) a.button {
+            background-color: #ebc474;
+            color: #5c3e17;
+        }
+
+        tr:nth-child(4n+1) a.button {
+            background-color: #d893a3;
+            color: #b30021;
+        }
+
+        tr:nth-child(4n+2) a.button {
+            background-color: #6fcaea;
+            color: #1d5e7b;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="table">
+        <section class="header">
+            <h1>小艾的舰长们（包含不在续费舰长）</h1>
+            <div class="input-group">
+                <img src="images/search.png" alt="Search">
+                <input type="search" placeholder="搜索 UID 或昵称...">
+            </div>
+        </section>
+        <section class="shell">
+            <table>
+                <thead>
+                    <tr>
+                        <th> UID🌙 </th>
+                        <th> 昵称💗</th>
+                        <th> 是否续费💞</th>
+                        <th> 上舰时间💌</th>
+                        <th> 主页链接🥰</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> 24649479 </td>
+                        <td> <img src="images/于安眠处狂欢.jpg" alt="于安眠处狂欢"> 于安眠处狂欢 </td>
+                        <td> 在续费 </td>
+                        <td> 2023-5-14 </td>
+                        <td>
+                            <a href="https://space.bilibili.com/24649479" target="_blank" class="button">前往主页GO</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>354688...</td>
+                        <td><img src="images/潮潮不吵.jpg" alt="潮潮不吵"> 潮潮不吵 </td>
+                        <td> 在续费 </td>
+                        <td> 2020-3-14 </td>
+                        <td>
+                            <a href="https://space.bilibili.com/354688..." target="_blank" class="button">前往主页GO</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> 193628... </td>
+                        <td><img src="images/我选不上ID.jpg" alt="我选不上ID"> 我选不上ID </td>
+                        <td> 在续费 </td>
+                        <td> 2023-1-28 </td>
+                        <td>
+                            <a href="https://space.bilibili.com/193628..." target="_blank" class="button">前往主页GO</a>
+                        </td>
+                    </tr>
+                    </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script>
+        const searchInput = document.querySelector('.header input[type="search"]');
+        const tableRows = document.querySelectorAll('.shell tbody tr');
+
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+
+            tableRows.forEach(row => {
+                const uid = row.cells[0].textContent.toLowerCase(); // 获取 UID 列的内容
+                const nickname = row.cells[1].textContent.toLowerCase(); // 获取昵称列的内容
+
+                if (uid.includes(searchTerm) || nickname.includes(searchTerm)) {
+                    row.style.display = ''; // 显示匹配的行
+                } else {
+                    row.style.display = 'none'; // 隐藏不匹配的行
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
